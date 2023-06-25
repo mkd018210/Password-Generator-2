@@ -10,17 +10,54 @@ var generateBtn = document.querySelector("#generate");
 
 // Get references to the #generate element
 function generatePassword () {
-    console.log(password.length);
-    sign = window.prompt("Pick your password");
-  var index = Math.floor(Math.random() * options.length);
-  var computerChoice = options[index];
 
+    var pool = []
+    var passwordlength = window.prompt("Password must me between 8 & 128 characters");
+    //if(passwordLength < 8 || passwordLength > 128){}
+    //if(passwordLength not a number){}
+    var upperCaseLetters = window.confirm("Do you want to use upper case letters");
+    //if(CONDITION){LOGIC}
+    //else if (CONDITION){LOGIC}
+    //else{CATCH ALL LOGIC}
+    if(upperCaseLetters === true){
+        pool = pool.concat(upperCase)
+    }
+ 
+    var lowerCaseLetters = window.confirm("Do you want to use lower case letters?");
+    if(lowerCaseLetters === true){
+        pool = pool.concat(lowerCase)
+    }
+    
+    var numberCharacters = window.confirm("Do you want to use numbers?");
+    if(numberCharacters === true){
+        pool = pool.concat(numbers)
+    }
+    var specialCharactersUse = window.confirm("Do you want to use special characters?");
+    if(specialCharactersUse === true){
+        pool = pool.concat(specialCharacters)
+    }
+    console.log(pool)
+    //if pool has nothing in it
+
+    //passwordLength = 15
+    //pool = [ABCabc123!)@()]
+    console.log(passwordlength.length);
+
+    //var emptyString = ""
+    //for(passwordLength)
+
+    //Ac3AbA!bC3Sa2!@
+
+
+    return "Mandy is cool!"
   
 }
 
 // Write password to the #password input
 function writePassword() {
+
   var password = generatePassword();
+  console.log(password)
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
