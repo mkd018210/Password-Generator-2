@@ -37,19 +37,15 @@ function generatePassword () {
         pool = pool.concat(specialCharacters)
     }
     console.log(pool)
-    //if pool has nothing in it
+    for(var i=0; i < pool.length; i++) {
+       
+        console.log("Pick your characters" + pool[i]);
+      }
+    console.log(pool.length);
 
-    //passwordLength = 15
-    //pool = [ABCabc123!)@()]
-    console.log(passwordlength.length);
+    
 
-    //var emptyString = ""
-    //for(passwordLength)
-
-    //Ac3AbA!bC3Sa2!@
-
-
-    return "Mandy is cool!"
+    return "Random Password"
   
 }
 
